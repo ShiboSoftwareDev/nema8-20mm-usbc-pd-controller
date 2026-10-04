@@ -14,11 +14,15 @@
     "build": "tsci build",
     "snapshot": "tsci snapshot",
     "snapshot:update": "tsci snapshot --update",
+    "test": "bun tests/check-downstream-orientations.tsx && bun run test:orientation:usb-esd && bun run test:orientation:vm-tvs",
+    "test:orientation:usb-esd": "tsci snapshot tests/repros/u-usb-esd-imported-orientation.circuit.tsx --3d --camera-preset top-down-ortho --test",
+    "test:orientation:vm-tvs": "tsci snapshot tests/repros/d-vm-tvs-imported-orientation.circuit.tsx --3d --camera-preset top-down-ortho --test",
     "start": "tsci dev",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/react": "^19.3.0",
+    "circuit-json-to-pnp-csv": "^0.0.19",
     "tscircuit": "^0.0.2710",
     "typescript": "^5.0.0"
   },
