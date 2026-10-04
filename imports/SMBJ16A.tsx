@@ -28,14 +28,14 @@ export const SMBJ16A = (props: ChipProps<typeof pinLabels>) => {
       manufacturerPartNumber="SMBJ16A"
       footprint={
         <footprint>
-          <smtpad portHints={["pin201"]} pcbX="0mm" pcbY="-2.5913mm"
-            width="2.241mm" height="2.0475mm" shape="rect" />
-          <smtpad portHints={["pin202"]} pcbX="0mm" pcbY="2.5913mm"
-            width="2.241mm" height="2.0475mm" shape="rect" />
+          <smtpad portHints={["pin201"]} pcbX="-2.5913mm" pcbY="0mm"
+            width="2.0475mm" height="2.241mm" shape="rect" />
+          <smtpad portHints={["pin202"]} pcbX="2.5913mm" pcbY="0mm"
+            width="2.0475mm" height="2.241mm" shape="rect" />
           <courtyardoutline outline={[
-            { x: -1.1205, y: -3.61505 }, { x: 1.1205, y: -3.61505 },
-            { x: 1.1205, y: 3.61505 }, { x: -1.1205, y: 3.61505 },
-            { x: -1.1205, y: -3.61505 },
+            { x: -3.61505, y: -1.1205 }, { x: 3.61505, y: -1.1205 },
+            { x: 3.61505, y: 1.1205 }, { x: -3.61505, y: 1.1205 },
+            { x: -3.61505, y: -1.1205 },
           ]} />
         </footprint>
       }

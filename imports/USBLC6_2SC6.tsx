@@ -55,16 +55,16 @@ export const USBLC6_2SC6 = (props: ChipProps<typeof pinLabels>) => {
       manufacturerPartNumber="USBLC6-2SC6"
       footprint={
         <footprint>
-          <smtpad portHints={["pin401"]} pcbX="1.1491mm" pcbY="-0.95mm" width="1.072mm" height="0.532mm" shape="rect" />
-          <smtpad portHints={["pin402"]} pcbX="1.1491mm" pcbY="0mm" width="1.072mm" height="0.532mm" shape="rect" />
-          <smtpad portHints={["pin403"]} pcbX="1.1491mm" pcbY="0.95mm" width="1.072mm" height="0.532mm" shape="rect" />
-          <smtpad portHints={["pin404"]} pcbX="-1.1491mm" pcbY="0.95mm" width="1.072mm" height="0.532mm" shape="rect" />
-          <smtpad portHints={["pin405"]} pcbX="-1.1491mm" pcbY="0mm" width="1.072mm" height="0.532mm" shape="rect" />
-          <smtpad portHints={["pin406"]} pcbX="-1.1491mm" pcbY="-0.95mm" width="1.072mm" height="0.532mm" shape="rect" />
+          <smtpad portHints={["pin401"]} pcbX="-0.95mm" pcbY="-1.1491mm" width="0.532mm" height="1.072mm" shape="rect" />
+          <smtpad portHints={["pin402"]} pcbX="0mm" pcbY="-1.1491mm" width="0.532mm" height="1.072mm" shape="rect" />
+          <smtpad portHints={["pin403"]} pcbX="0.95mm" pcbY="-1.1491mm" width="0.532mm" height="1.072mm" shape="rect" />
+          <smtpad portHints={["pin404"]} pcbX="0.95mm" pcbY="1.1491mm" width="0.532mm" height="1.072mm" shape="rect" />
+          <smtpad portHints={["pin405"]} pcbX="0mm" pcbY="1.1491mm" width="0.532mm" height="1.072mm" shape="rect" />
+          <smtpad portHints={["pin406"]} pcbX="-0.95mm" pcbY="1.1491mm" width="0.532mm" height="1.072mm" shape="rect" />
           <courtyardoutline outline={[
-            { x: -1.6851, y: -1.216 }, { x: 1.6851, y: -1.216 },
-            { x: 1.6851, y: 1.216 }, { x: -1.6851, y: 1.216 },
-            { x: -1.6851, y: -1.216 },
+            { x: -1.216, y: -1.6851 }, { x: 1.216, y: -1.6851 },
+            { x: 1.216, y: 1.6851 }, { x: -1.216, y: 1.6851 },
+            { x: -1.216, y: -1.6851 },
           ]} />
         </footprint>
       }
