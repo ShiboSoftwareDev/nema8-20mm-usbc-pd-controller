@@ -2345,7 +2345,7 @@ export default function Nema8TwentyMillimeterController({
         schX={-7} schY={-2}
         connections={{ pin1: "net.DATA_CC2", pin2: "net.GND" }} />
 
-      <USBLC6_2SC6 name="U_USB_ESD" layer="bottom" pcbX={-5.0} pcbY={0.5} pcbRotation={0}
+      <USBLC6_2SC6 name="U_USB_ESD" layer="bottom" pcbX={-5.0} pcbY={0.5} pcbRotation={270}
         schSectionName={schematicSections.usbData} schSheetName={schematicSheets.control}
         schX={-5} schY={3}
         connections={{ pin401: "net.USB_DM_CONN", pin403: "net.USB_DP_CONN",
@@ -2429,7 +2429,7 @@ export default function Nema8TwentyMillimeterController({
         schSectionName={schematicSections.powerInput} schSheetName={schematicSheets.power}
         schX={-2} schY={4}
         connections={{ anode: "net.PD_VBUS_FUSED", cathode: "net.VM" }} />
-      <SMBJ16A name="D_VM_TVS" layer="top" pcbX={8.5} pcbY={6.1} pcbRotation={0}
+      <SMBJ16A name="D_VM_TVS" layer="top" pcbX={8.5} pcbY={6.1} pcbRotation={90}
         schSectionName={schematicSections.powerInput} schSheetName={schematicSheets.power}
         schX={1} schY={1} schRotation={90}
         connections={{ pin201: "net.VM", pin202: "net.GND" }} />

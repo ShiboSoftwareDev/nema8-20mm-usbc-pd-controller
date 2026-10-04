@@ -86,23 +86,20 @@ const actual = {
   },
 }
 
-// These are the erroneous outputs from the published 1.0.4 package. Keeping
-// them executable makes the downstream failures explicit before either fix is
-// applied:
-// - the two rewritten imports export incorrect assembly rotations and do not
-//   identify physical pin 1, so supplier-aware PnP cannot verify them;
-// - U_3V3 has a 90-degree footprint rotation and 90-degree model offset, but the
-//   bottom-side CAD transform produced by core points its model at 180 degrees.
-const publishedV104Output = {
+// The import fix restores the EasyEDA geometry without moving connected pads
+// and verifies the actual PnP exporter, rather than only checking component
+// props. U_3V3 remains here as downstream evidence for the independent core
+// transform fix.
+const correctedImportOutput = {
   usbEsd: {
-    pcbRotation: 0,
-    pnpRotation: 0,
+    pcbRotation: 270,
+    pnpRotation: 270,
     pin1Location: undefined,
     electricalPin1Position: { x: -6.1491, y: -0.45 },
   },
   vmTvs: {
-    pcbRotation: 0,
-    pnpRotation: 0,
+    pcbRotation: 90,
+    pnpRotation: 90,
     pin1Location: undefined,
     cathodePosition: { x: 8.5, y: 3.5087 },
   },
@@ -112,8 +109,8 @@ const publishedV104Output = {
   },
 }
 
-if (JSON.stringify(actual) !== JSON.stringify(publishedV104Output)) {
+if (JSON.stringify(actual) !== JSON.stringify(correctedImportOutput)) {
   throw new Error(
-    `Published 1.0.4 output changed:\n${JSON.stringify(actual, null, 2)}`,
+    `Corrected output changed:\n${JSON.stringify(actual, null, 2)}`,
   )
 }
